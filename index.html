@@ -1,0 +1,44 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Workout Timer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Timer</h1>
+        <div class="routine-selection">
+            <button class="routine-btn" onclick="startRoutine('A')">Routine A</button>
+            <button class="routine-btn" onclick="startRoutine('B')">Routine B</button>
+        </div>
+        
+        <div class="exercise-display">
+            <div class="exercise-header">
+                <h2 class="exercise-name"></h2>
+                <div class="exercise-progress"></div>
+            </div>
+            <div class="exercise-gif">
+                <img id="exerciseGif" src="" alt="Exercise demonstration">
+            </div>
+            <div class="exercise-info"></div>
+            <div class="timer-container">
+                <div class="timer">00:00</div>
+                <div class="reps-display"></div>
+            </div>
+            <div class="timer-controls">
+                <button class="control-btn pause" onclick="togglePause()">Pause</button>
+            </div>
+            <button class="proceed-btn" onclick="proceedToNext()">Next Exercise →</button>
+        </div>
+        
+        <div class="complete">
+            🎉 Workout Complete! Great job! 💪
+        </div>
+    </div>
+    <audio id="chime" src="chime.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

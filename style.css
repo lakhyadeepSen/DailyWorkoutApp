@@ -1,0 +1,475 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 16px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 32px);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+.routine-selection {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.routine-btn {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.routine-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.exercise-display {
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.exercise-header {
+    background-color: #333;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.exercise-name {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 8px;
+}
+
+.exercise-progress {
+    font-size: 1rem;
+    color: #888;
+    margin: 10px 0;
+}
+
+.exercise-gif {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 0 auto 20px auto; /* Adjusted margin */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Adjusted margin */
+}
+
+.timer {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    font-family: monospace;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reps-display {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.control-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #333;
+    color: white;
+}
+
+.control-btn:hover {
+    background-color: #444;
+}
+
+.control-btn.pause {
+    background-color: #ff9800;
+}
+
+.control-btn.resume {
+    background-color: #4CAF50;
+}
+
+.proceed-btn {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.proceed-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.complete {
+    display: none;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 12px;
+        min-height: calc(100vh - 16px);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .exercise-name {
+        font-size: 1.2rem;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+
+    .exercise-gif {
+        height: 250px;
+    }
+
+    .routine-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .proceed-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .exercise-info {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 16px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 32px);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+.routine-selection {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.routine-btn {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.routine-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.exercise-display {
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.exercise-header {
+    background-color: #333;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.exercise-name {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 8px;
+}
+
+.exercise-progress {
+    font-size: 1rem;
+    color: #888;
+    margin: 10px 0;
+}
+
+.exercise-gif {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exercise-info {
+    background-color: #333;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.instruction-title {
+    color: #4CAF50;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.timer {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    font-family: monospace;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reps-display {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-top: 10px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.control-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #333;
+    color: white;
+}
+
+.control-btn:hover {
+    background-color: #444;
+}
+
+.control-btn.pause {
+    background-color: #ff9800;
+}
+
+.control-btn.resume {
+    background-color: #4CAF50;
+}
+
+.proceed-btn {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.proceed-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.complete {
+    display: none;
+    text-align: center;
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 12px;
+        min-height: calc(100vh - 16px);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .exercise-name {
+        font-size: 1.2rem;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+
+    .exercise-gif {
+        height: 250px;
+    }
+
+    .routine-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .proceed-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .exercise-info {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
